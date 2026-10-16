@@ -125,27 +125,29 @@ optimize, restart workers). **Behind Cloudflare "Flexible" or a load balancer on
 
 ---
 Langkah instalasi Di Casa_OS Custom by NSU 
+
 1.Masuk ke Terminal CasaOS
 SSH ke perangkat CasaOS Anda.
 
 2.Clone Repositori
 
-bash
+
 cd /var/www
 sudo mkdir -p KusumaVisionNMS && sudo chown "$USER:$USER" KusumaVisionNMS
 git clone https://github.com/nsuwifisolution-creator/Rebuild-By-Kusumavision1.git KusumaVisionNMS
 cd KusumaVisionNMS
+
 (Catatan: Ganti URL clone dengan URL repositori yang benar jika berbeda).
 
 3.Siapkan Environment
 
-bash
+
 cp .env.docker.example .env
 # Edit file .env dan sesuaikan DB_PASSWORD serta akun admin
 nano .env
+
 4.Jalankan Docker Compose
 
-bash
 docker compose up -d --build
 Proses build pertama akan memakan waktu cukup lama.
 
